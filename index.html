@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THiJARI Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .sidebar h1 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold; /* Bold text */
+        }
+
+        .sidebar .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .logo-container img {
+            max-height: 50px;
+            margin-right: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold; /* Bold text */
+        }
+
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .header .logo {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .header .dashboard-text {
+            font-size: 16px; /* Increased font size */
+            color: #333;
+            text-align: left; /* Aligned to the left */
+            font-weight: bold; /* Bold text */
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 18px; /* Increased font size for card content */
+            text-align: left; /* Aligned to the left */
+            box-sizing: border-box;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .link {
+            color: green;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            max-height: 50px;
+            margin-right: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px; /* Increased font size for footer */
+            color: #888;
+            font-weight: bold; /* Bold text */
+            margin-top: 20px; /* Add margin to the top */
+        }
+
+        .logout-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logout-container img {
+            height: 20px; /* Smaller logo size */
+            margin-right: 5px;
+        }
+
+        .logout-text {
+            font-size: 16px; /* Increased font size */
+            font-weight: bold; /* Bold text */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo-container">
+            <img src="logo.webp" alt="Tabung Haji Logo">
+            <h1>TABUNG HAJI</h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Laman Utama</a></li>
+            <li><a href="ringkasan.html">Ringkasan Akaun</a></li>
+            <li><a href="#">Pindahan</a></li>
+            <li><a href="#">Perkhidmatan Haji</a></li>
+            <li><a href="#">TH Khairat</a></li>
+            <li><a href="#">Penamaan/Pusaka/Hibah</a></li>
+            <li><a href="#">Akaun Kanak-kanak</a></li>
+            <li><a href="#">Qurban 1446H</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <img src="finger.png" alt="Logo" class="logo">
+            <div class="dashboard-text">
+                DASHBOARD SAYA | PROFIL SAYA | AKSES SAYA | PETI SURAT (2) | 
+                <div class="logout-container">
+                    <img src="keluar.jpg" alt="Logout Icon">
+                    <span class="logout-text">LOG KELUAR</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-container">
+            <div class="card">
+                <h3>Selamat Datang, MUHAMMAD IKHWAN BIN ZULPIKA ALI!</h3>
+                <p>Kali terakhir berjaya log masuk: 22/12/2024 10:00:44<br>
+                   Kali terakhir gagal log masuk: 08/10/2024 21:48:04</p>
+                <p>Anda ada <strong>2 pesanan</strong> baru yang belum dibaca.</p>
+            </div>
+
+            <div class="card">
+                <h3>Status Haji</h3>
+                <p>Anda belum mendaftar Haji. Sila klik <a href="#" class="link">sini</a> untuk mendaftar.</p>
+            </div>
+
+            <div class="card">
+                <h3>Pengumuman</h3>
+                <p>Tiada lagi pengumuman untuk THiJARI.</p>
+            </div>
+
+            <div class="card">
+                <h3>Ringkasan Akaun</h3>
+                <p>Sila tentukan 2 Akaun TH untuk dipaparkan di sini.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Tabung Haji. All rights reserved.
+    </div>

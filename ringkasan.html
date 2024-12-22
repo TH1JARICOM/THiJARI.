@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THiJARI Dashboard</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar.hidden {
+            transform: translateX(-100%);
+        }
+
+        .sidebar h1 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .sidebar .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .logo-container img {
+            max-height: 50px;
+            margin-right: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .header .logo {
+            height: 100px;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            width: 30px;
+            height: 21px;
+            justify-content: space-between;
+            cursor: pointer;
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+
+        .hamburger div {
+            height: 3px;
+            background-color: #333;
+            border-radius: 3px;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: left;
+            box-sizing: border-box;
+            width: 45%;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-weight: bold;
+        }
+
+        .highlight-green {
+            color: green;
+        }
+
+        .highlight-grey {
+            color: grey;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo-container">
+            <img src="logo.webp" alt="Tabung Haji Logo">
+            <h1>TABUNG HAJI</h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Laman Utama</a></li>
+            <li><a href="ringkasan.html">Ringkasan Akaun</a></li>
+            <li><a href="#">Pindahan</a></li>
+            <li><a href="#">Perkhidmatan Haji</a></li>
+            <li><a href="#">TH Khairat</a></li>
+            <li><a href="#">Penamaan/Pusaka/Hibah</a></li>
+            <li><a href="#">Akaun Kanak-kanak</a></li>
+            <li><a href="#">Qurban 1446H</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger" onclick="toggleSidebar()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <img src="finger.png" alt="Logo" class="logo">
+        </div>
+
+        <div class="cards-container">
+            <div class="card">
+                <h3>Akaun Dewasa (Adult Account)</h3>
+            </div>
+            <div class="card">
+                <p>Account Holder: <span class="highlight-green">MUHAMMAD IKHWAN BIN ZULPIKA ALI</span> <br>
+                   <span class="highlight-grey">Account Number: 130101001396659</span></p>
+            </div>
+            <div class="card">
+                <p><span class="highlight-grey">Baki Semasa:</span></p>
+                <p>MYR 13.100</p>
+            </div>
+            <div class="card">
+                <h3>Akaun Kanak-kanak</h3>
+            </div>
+            <div class="card">
+                <p>Status: Tiada Akaun Kanak-kanak.</p>
+            </div>
+            <div class="card">
+                <h3>Jumlah (Total)</h3>
+            </div>
+            <div class="card">
+                <p><span class="highlight-grey">Total Balance: MYR 0.00</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Hak Cipta &copy; 2024 Lembaga Tabung Haji. Hak Cipta Terpelihara.
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>
